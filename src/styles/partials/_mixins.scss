@@ -1,0 +1,15 @@
+@use 'media-queries' as mq;
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin forScreenSizeMin($device) {
+  @if $device == 'mobile' {
+    @media only screen and (min-width: mq.$mobile-resolution-min-width) and (max-width: mq.$mobile-resolution-max-width) {
+      @content;
+    }
+  }
+  // Add more devices as needed
+}
