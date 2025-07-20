@@ -1,4 +1,41 @@
-$font-family: 'Helvetica Neue', sans-serif;
-$font-size-base: 16px;
-$font-size-lg: 18px;
+// ------------------------------
+// FONT FAMILY
+// ------------------------------
+$font-family-base: 'Helvetica Neue', sans-serif;
+$font-family-heading: $font-family-base;
+
+// ------------------------------
+// FONT SIZE SCALE
+// ------------------------------
+
+$font-size-xs: 12px;
 $font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+$font-size-hero: 48px;
+
+// ------------------------------
+// FONT WEIGHTS
+// ------------------------------
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ------------------------------
+// LINE HEIGHT
+// ------------------------------
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-loose: 1.75;
+
+// ------------------------------
+// LETTER SPACING (opțional)
+// ------------------------------
+$letter-spacing-tight: -0.5px;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.5px;

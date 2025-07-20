@@ -1,9 +1,17 @@
-@use './partials/colors';
-@use './partials/variables';
-@use './partials/fonts';
-@use './partials/mixins';
-@use './partials/media-queries';
+@use './partials/colors' as colors;
+@use './partials/variables' as variables;
+@use './partials/fonts' as fonts;
+@use './partials/mixins' as mixins;
+@use './partials/media-queries' as media;
 
-// .test-mixin {
-//   @include widthHeight(100px, 50px);
-// }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: fonts.$font-family-base;
+  color: colors.$white;
+}

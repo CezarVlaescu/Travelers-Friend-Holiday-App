@@ -1,2 +1,91 @@
-$blue: blue;
-$black: black;
+// Colors
+
+$white: #FFFFFF;
+
+$frame1-stop-0: #180D41;
+$frame1-stop-30: #350D53;
+$frame1-stop-56: #190E43;
+$frame1-stop-100: #130736;
+
+$layout-curved-41: #804DE7;
+$layout-curved-100: #563382;
+
+$features-linear-0: #624FBB;
+$features-linear-49: #8C6BBD;
+$features-linear-100: #6A4682;
+
+$hover-primary-blue: #487EE9;
+$hover-primary-red: #DB2424;
+
+$hover-accent-yellow: #FFF500;
+$hover-accent-pink: #F11CA4;
+$hover-accent-purple: #7A0CFC;
+$hover-accent-red: #E00D1E;
+
+$label-color-0: #624FBB;
+$label-color-100: #200F3B;
+
+$button-color-0: #6D41CE;
+$button-color-100: #8D20C2;
+
+$bg-card-gradient-start: rgba(49, 58, 91, 0);
+$bg-card-gradient-mid: rgba(49, 58, 91, 1);
+$bg-card-gradient-end: rgba(33, 39, 61, 1);
+
+// Gradients
+$background-gradient: linear-gradient(
+  90deg,
+  $frame1-stop-0 0%,
+  $frame1-stop-30 30%,
+  $frame1-stop-56 56%,
+  $frame1-stop-100 100%
+);
+
+$layout-gradient: linear-gradient(
+  90deg,
+  $layout-curved-41 41%,
+  $layout-curved-100 100%
+);
+
+$features-gradient: linear-gradient(
+  90deg,
+  $features-linear-0 0%,
+  $features-linear-49 49%,
+  $features-linear-100 100%
+);
+
+$selected-feature-gradient: linear-gradient(
+  90deg,
+  $button-color-0 0%,
+  $button-color-100 100%
+);
+
+$hover-primary-gradient: linear-gradient(90deg, $hover-primary-blue 0%, $hover-primary-red 100%);
+
+$hover-accent-gradient: linear-gradient(
+  90deg,
+  $hover-accent-yellow 14%,
+  $hover-accent-pink 36%,
+  $hover-accent-purple 63%,
+  $hover-accent-red 86%
+);
+
+$label-gradient: linear-gradient(
+  90deg,
+  $label-color-0 0%,
+  $label-color-100 100%
+);
+
+$button-gradient: linear-gradient(
+  90deg,
+  $button-color-0 0%,
+  $button-color-100 100%
+);
+
+$background-cards-gradient: linear-gradient(
+  180deg,
+  $bg-card-gradient-start 0%,
+  $bg-card-gradient-mid 45%,
+  $bg-card-gradient-mid 45%,
+  $bg-card-gradient-end 100%
+);
