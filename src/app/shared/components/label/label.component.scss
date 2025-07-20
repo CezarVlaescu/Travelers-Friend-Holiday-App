@@ -1,0 +1,42 @@
+@use '../../../../styles/partials/colors' as colors;
+@use '../../../../styles/partials/mixins' as mixins;
+@use '../../../../styles/partials/fonts' as fonts;
+
+.label-container {
+    min-height: 50px;
+    background: colors.$label-gradient;
+    border-radius: 30px;
+    padding: 12px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+
+        &__circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            @include mixins.widthHeight(48px, 40px);
+
+            &__image {
+                @include mixins.widthHeight(20px, 20px);
+            }
+        }
+
+        &__input {
+            background: transparent; 
+            border: none; 
+            outline: none;
+            @include mixins.widthHeight(100%, 100%);
+            @include mixins.textStyle(fonts.$font-size-sm, fonts.$font-weight-semibold, colors.$white);
+            
+            &::placeholder {
+                @include mixins.textStyle(fonts.$font-size-sm, fonts.$font-weight-semibold);
+            }
+        }
+    }
+}

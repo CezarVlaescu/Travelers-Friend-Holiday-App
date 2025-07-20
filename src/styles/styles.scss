@@ -1,3 +1,7 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
 @use './partials/colors' as colors;
 @use './partials/variables' as variables;
 @use './partials/fonts' as fonts;

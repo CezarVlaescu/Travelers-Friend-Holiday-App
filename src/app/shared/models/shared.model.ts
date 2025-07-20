@@ -15,6 +15,25 @@ interface IUserDto {
     roles: string[];
 }
 
+type LabelConfigType = {
+    name: string;
+    image?: string;
+    type: LabelEnumType;
+}
+
+enum LabelEnumType {
+    Text = 'text',
+    Email = 'email',
+    Password = 'password',
+    Number = 'number',
+    Date = 'date'
+}
+
+// Export interfaces and types for use in other parts of the application
 export type { 
-    IUserDto 
+    IUserDto,
+    LabelConfigType 
 }; 
+
+//Export enums for use in other parts of the application
+export { LabelEnumType };

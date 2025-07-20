@@ -1,4 +1,19 @@
 @use 'media-queries' as mq;
+@use 'fonts' as fonts;
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin textStyle($font-size, $font-weight, $color: null, $line-height: fonts.$line-height-normal, $letter-spacing: fonts.$letter-spacing-normal) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+
+  @if $color != null {
+    color: $color;
+  }
+}
 
 // Mixin: Mobile only
 @mixin mobile-only {
