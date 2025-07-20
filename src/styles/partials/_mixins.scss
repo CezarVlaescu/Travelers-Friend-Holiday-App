@@ -1,14 +1,59 @@
 @use 'media-queries' as mq;
 
-@mixin widthHeight($width, $height) {
-  width: $width;
-  height: $height;
+// Mixin: Mobile only
+@mixin mobile-only {
+  @media (min-width: mq.$mobile-resolution-min-width) and (max-width: mq.$mobile-resolution-max-width) {
+    @content;
+  }
 }
 
-@mixin forScreenSizeMin($device) {
-  @if $device == 'mobile' {
-    @media only screen and (min-width: mq.$mobile-resolution-min-width) and (max-width: mq.$mobile-resolution-max-width) {
-      @content;
-    }
+// Mixin: mobile-up (min-width)
+@mixin mobile-up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+// Mixin: mobile-down (max-width)
+@mixin mobile-down($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+// Mixin: between any two breakpoints
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// Specific mobile sizes
+@mixin only-xs {
+  @include between(mq.$mobile-xs, mq.$mobile-sm - 1px);
+}
+
+@mixin only-sm {
+  @include between(mq.$mobile-sm, mq.$mobile-md - 1px);
+}
+
+@mixin only-md {
+  @include between(mq.$mobile-md, mq.$mobile-lg - 1px);
+}
+
+@mixin only-lg {
+  @include between(mq.$mobile-lg, mq.$tablet-breakpoint - 1px);
+}
+
+// Tablet
+@mixin tablet-up {
+  @media (min-width: mq.$tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{mq.$tablet-breakpoint - 1px}) {
+    @content;
   }
 }
