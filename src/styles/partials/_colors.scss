@@ -28,6 +28,12 @@ $label-color-100: #200F3B;
 $button-color-0: #6D41CE;
 $button-color-100: #8D20C2;
 
+$hover-button-color-0: #4E3CA3;
+$hover-button-color-49: #7A57B3;
+$hover-button-color-100: #563A9C;
+
+$disabled-bg: #E0E0E0;
+
 $bg-card-gradient-start: rgba(49, 58, 91, 0);
 $bg-card-gradient-mid: rgba(49, 58, 91, 1);
 $bg-card-gradient-end: rgba(33, 39, 61, 1);
@@ -88,4 +94,11 @@ $background-cards-gradient: linear-gradient(
   $bg-card-gradient-mid 45%,
   $bg-card-gradient-mid 45%,
   $bg-card-gradient-end 100%
+);
+
+$button-gradient-hover: linear-gradient(
+  90deg,
+  $hover-button-color-0 0%,
+  $hover-button-color-49 49%,
+  $hover-button-color-100 100%
 );

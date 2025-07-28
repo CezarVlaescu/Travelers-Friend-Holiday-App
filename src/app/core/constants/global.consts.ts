@@ -9,8 +9,14 @@
  * Define constants, then export them using the export statment in the end of the file.
 */
 
-const GLOBAL_THEMES = ['light', 'dark'];
+import { ButtonConfigType, LabelConfigType, LabelEnumType } from "../../shared/models/shared.model";
+
+const GLOBAL_THEMES: string[] = ['light', 'dark'];
+const BUTTON_DEFAULT_CONFIG: ButtonConfigType = { label: 'Button', onClick: () => console.log('Button clicked'), disabled: false };
+const LABEL_DEFAULT_CONFIG: LabelConfigType = { name: 'Select your country', image: 'assets/images/flags/flag.png', type: LabelEnumType.Text };
 
 export const GLOBAL_CONSTS = { 
-    GLOBAL_THEMES 
+    GLOBAL_THEMES, 
+    BUTTON_DEFAULT_CONFIG, 
+    LABEL_DEFAULT_CONFIG
 };

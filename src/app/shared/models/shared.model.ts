@@ -19,6 +19,14 @@ type LabelConfigType = {
     name: string;
     image?: string;
     type: LabelEnumType;
+    widthInput?: string;
+}
+
+type ButtonConfigType = {
+    label: string;
+    onClick: () => void;
+    disabled?: boolean;
+    widthInput?: string;
 }
 
 enum LabelEnumType {
@@ -32,7 +40,8 @@ enum LabelEnumType {
 // Export interfaces and types for use in other parts of the application
 export type { 
     IUserDto,
-    LabelConfigType 
+    LabelConfigType,
+    ButtonConfigType
 }; 
 
 //Export enums for use in other parts of the application

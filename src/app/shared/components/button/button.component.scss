@@ -1,0 +1,28 @@
+@use '../../../../styles/partials/colors' as colors;
+@use '../../../../styles/partials/mixins' as mixins;
+@use '../../../../styles/partials/fonts' as fonts;
+
+.button-container {
+    background: colors.$button-gradient;
+    border-radius: 30px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &__button {
+        background: transparent;
+        border: none;
+        outline: none;
+        @include mixins.textStyle(
+            fonts.$font-size-sm, 
+            fonts.$font-weight-semibold, 
+            colors.$white
+        );
+    }
+}
+
+.button-container:hover {
+    background: colors.$button-gradient-hover;
+}

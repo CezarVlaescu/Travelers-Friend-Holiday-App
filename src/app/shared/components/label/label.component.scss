@@ -3,7 +3,6 @@
 @use '../../../../styles/partials/fonts' as fonts;
 
 .label-container {
-    min-height: 50px;
     background: colors.$label-gradient;
     border-radius: 30px;
     padding: 12px;
@@ -11,7 +10,7 @@
     &__inner {
         display: flex;
         align-items: center;
-        width: 100%;
+        @include mixins.widthHeight(100%, 30px);
         gap: 10px;
 
         &__circle {

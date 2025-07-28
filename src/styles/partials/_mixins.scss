@@ -1,5 +1,6 @@
 @use 'media-queries' as mq;
 @use 'fonts' as fonts;
+@use 'colors' as colors;
 
 @mixin widthHeight($width, $height) {
   width: $width;
@@ -13,6 +14,13 @@
   @if $color != null {
     color: $color;
   }
+}
+
+@mixin ariaDisabled() {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: colors.$disabled-bg;
 }
 
 // Mixin: Mobile only

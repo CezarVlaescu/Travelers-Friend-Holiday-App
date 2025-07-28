@@ -1,1 +1,12 @@
-<p>button works!</p>
+<div 
+class="button-container"
+[class]="{ 'disabled-area': buttonConfig().disabled }"
+[style.width]="buttonConfig().widthInput">
+    <button 
+    mat-raised-button 
+    class="button-container__button"
+    (click)="buttonConfig().onClick()"
+    >
+        <span>{{ buttonConfig().label }}</span>
+    </button>
+</div>

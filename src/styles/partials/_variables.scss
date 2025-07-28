@@ -1,0 +1,5 @@
+@use '../partials/mixins' as mixins;
+
+.disabled-area {
+  @include mixins.ariaDisabled();
+}

@@ -1,4 +1,7 @@
-<div class="label-container">
+<div 
+class="label-container"
+[style.width]="labelConfiguration().widthInput"
+>
     <div class="label-container__inner">
         <div class="label-container__inner__circle">
             <img [src]="labelConfiguration().image" 
