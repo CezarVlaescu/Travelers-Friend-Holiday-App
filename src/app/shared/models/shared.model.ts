@@ -15,14 +15,14 @@ interface IUserDto {
     roles: string[];
 }
 
-type LabelConfigType = {
+interface LabelConfigType {
     name: string;
     image?: string;
     type: LabelEnumType;
     widthInput?: string;
 }
 
-type ButtonConfigType = {
+interface ButtonConfigType {
     label: string;
     onClick: () => void;
     disabled?: boolean;

@@ -1,0 +1,43 @@
+@use '../../../../styles/partials/mixins' as mixins;
+@use '../../../../styles/partials/colors' as colors;
+
+.option-box-container {
+  @include mixins.widthHeight(100px, 100px);
+  position: relative;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: colors.$features-gradient;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: colors.$hover-accent-gradient;
+    opacity: 0;
+    transition: opacity .25s ease, filter .25s ease;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: colors.$button-gradient;
+    &::before { opacity: 1; }
+  }
+}
+
+.icon-size {
+  @include mixins.widthHeight(50px, 50px);
+  font-size: 50px;
+  position: relative;
+  z-index: 1;
+}

@@ -1,9 +1,8 @@
-@use "../../../styles/partials/fonts" as fonts;
+@use "../../../styles/partials/mixins" as mixins;
 
 .homepage-container {
     padding: 20px;
-    height: 100%;
-    width: 100%;
+    @include mixins.widthHeight(100%, 100%);
     display: flex;
     flex-direction: column;
 }
